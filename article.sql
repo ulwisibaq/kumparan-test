@@ -1,0 +1,8 @@
+CREATE TABLE `articles` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `author` text NULL DEFAULT NULL,
+  `title` text NULL DEFAULT NULL,
+  `body` text NULL DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)

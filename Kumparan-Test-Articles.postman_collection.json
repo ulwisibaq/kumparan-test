@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "c02ab309-6cd4-446e-ade9-54e37e5af291",
+		"name": "Kumparan-Test-Articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/articles?author=ahmad&keyword=book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "ahmad"
+						},
+						{
+							"key": "keyword",
+							"value": "book"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get articles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/articles?author=ahmad&keyword=book",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "author",
+									"value": "ahmad"
+								},
+								{
+									"key": "keyword",
+									"value": "book"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Sep 2021 11:43:19 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"author\": \"ahmad\",\n            \"title\": \"the book\",\n            \"body\": \"this is my book\",\n            \"created\": \"2021-09-12T11:28:11Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "create new article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"ahmad\",\n    \"title\": \"the book\",\n    \"body\": \"this is my book\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/articles",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create new article",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"ahmad\",\n    \"title\": \"the book\",\n    \"body\": \"this is my book\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/articles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Sep 2021 11:43:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "126"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"author\": \"ahmad\",\n        \"title\": \"the book\",\n        \"body\": \"this is my book\",\n        \"created\": \"2021-09-12T18:43:22.860984043+07:00\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
